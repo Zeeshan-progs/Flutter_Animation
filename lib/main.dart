@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'data.dart';
-import 'home_screen.dart';
+import 'Animated Scroll List/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
