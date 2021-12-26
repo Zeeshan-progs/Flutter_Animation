@@ -1,3 +1,4 @@
+import 'package:animated_list_view/home_page.dart';
 import 'package:flutter/material.dart';
 import 'data.dart';
 import 'Animated Scroll List/home_screen.dart';
@@ -13,8 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'animated list view',
-      home: MyHomePage(title: 'Animated listview'),
+      home: HomeScreen(),
     );
   }
 }
