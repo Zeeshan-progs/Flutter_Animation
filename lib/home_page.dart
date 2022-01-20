@@ -3,6 +3,8 @@ import 'package:animated_list_view/Animated%20Slide%20List/slide_animated_list.d
 import 'package:animated_list_view/constent.dart';
 import 'package:flutter/material.dart';
 
+import 'Instagram Like Animation/widget.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -27,6 +29,9 @@ class HomeScreen extends StatelessWidget {
                 text: 'part 2 - Slide Animated List',
                 widget: const SlideAnimatedList(),
               ),
+              Button(
+                  text: 'part 3 - Instagram Like Animation',
+                  widget: const InstagramLikeAnimation())
             ],
           ),
         ),
