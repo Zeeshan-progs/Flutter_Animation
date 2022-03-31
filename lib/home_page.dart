@@ -1,4 +1,5 @@
 import 'package:animated_list_view/Animated%20Scroll%20List/home_screen.dart';
+import 'package:animated_list_view/Animated%20SearchBar/animated_searchbar.dart';
 import 'package:animated_list_view/Animated%20Slide%20List/slide_animated_list.dart';
 import 'package:animated_list_view/constent.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,11 @@ class HomeScreen extends StatelessWidget {
               ),
               Button(
                   text: 'part 3 - Instagram Like Animation',
-                  widget: const InstagramLikeAnimation())
+                  widget: const InstagramLikeAnimation()),
+              Button(
+                text: 'Part 4 - Animated Search bar ',
+                widget: const AnimatedSearchBar(),
+              )
             ],
           ),
         ),
@@ -67,13 +72,18 @@ class _ButtonState extends State<Button> {
       child: AnimatedContainer(
         height: 60,
         margin: const EdgeInsets.only(top: 10, right: 15, left: 15, bottom: 7),
-        duration: const Duration(seconds: 2),
+        duration: const Duration(seconds: 1),
         decoration: BoxDecoration(
           border: Border.all(
             color: Colors.black,
             width: 1.4,
           ),
           borderRadius: BorderRadius.circular(18),
+        ),
+        transform: Matrix4.translationValues(
+          widget.text.isEmpty ? MediaQuery.of(context).size.width : 0,
+          0,
+          0,
         ),
         curve: Curves.bounceInOut,
         child: Center(
